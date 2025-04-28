@@ -1,0 +1,14 @@
+﻿  Source.cpp
+  vc.c
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(246,13): warning C4267: '=': conversão de 'size_t' para 'int', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(286,13): warning C4267: '=': conversão de 'size_t' para 'int', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(598,28): warning C4244: 'inicializando': conversão de 'int' para 'float', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(599,40): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(600,40): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(1408,8): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(1448,8): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+  Gerando código
+  Previous IPDB not found, fall back to full compilation.
+  All 130 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finalizada a geração de código
+  TP-G7-25481-27963-27966-27975.vcxproj -> C:\VisaoComputador\TP-G7-25481-27963-27966-27975\x64\Release\TP-G7-25481-27963-27966-27975.exe

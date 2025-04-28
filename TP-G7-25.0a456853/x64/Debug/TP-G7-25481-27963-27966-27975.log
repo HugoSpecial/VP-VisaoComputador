@@ -1,0 +1,13 @@
+﻿  Source.cpp
+  vc.c
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(246,13): warning C4267: '=': conversão de 'size_t' para 'int', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(286,13): warning C4267: '=': conversão de 'size_t' para 'int', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(598,28): warning C4244: 'inicializando': conversão de 'int' para 'float', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(599,40): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(600,40): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(1408,8): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(1448,8): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+Source.obj : error LNK2019: símbolo externo não resolvido, "public: virtual bool __cdecl cv::VideoCapture::read(class cv::debug_build_guard::_OutputArray const &)" (?read@VideoCapture@cv@@UEAA_NAEBV_OutputArray@debug_build_guard@2@@Z), referenciado na função main
+Source.obj : error LNK2019: símbolo externo não resolvido, "void __cdecl cv::imshow(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class cv::debug_build_guard::_InputArray const &)" (?imshow@cv@@YAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV_InputArray@debug_build_guard@1@@Z), referenciado na função main
+Source.obj : error LNK2019: símbolo externo não resolvido, "void __cdecl cv::putText(class cv::debug_build_guard::_InputOutputArray const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class cv::Point_<int>,int,double,class cv::Scalar_<double>,int,int,bool)" (?putText@cv@@YAXAEBV_InputOutputArray@debug_build_guard@1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$Point_@H@1@HNV?$Scalar_@N@1@HH_N@Z), referenciado na função main
+C:\VisaoComputador\TP-G7-25481-27963-27966-27975\x64\Debug\TP-G7-25481-27963-27966-27975.exe : fatal error LNK1120: 3 externo não resolvidos
