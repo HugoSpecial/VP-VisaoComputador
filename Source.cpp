@@ -89,6 +89,126 @@ int main(void) {
 		/* Número da frame a processar */
 		video.nframe = (int)capture.get(cv::CAP_PROP_POS_FRAMES);
 
+<<<<<<< HEAD
+
+		// Faça o seu código aqui...
+
+		// Criação das imagens para processamento
+		IVC* imageFromVideo = vc_image_new(video.width, video.height, 3, 255);
+		IVC* imageInRGB = vc_image_new(video.width, video.height, 3, 255);
+		IVC* imageInHSV = vc_image_new(video.width, video.height, 3, 255);
+		IVC* imageSegmentation = vc_image_new(video.width, video.height, 1, 255);
+
+		// Copiar dados da frame para o buffer de processamento
+		memcpy(imageFromVideo->data, frame.data, video.width * video.height * 3);
+
+
+
+		if (vc_bgr_to_rgb(imageFromVideo, imageInRGB) == 0) {
+			std::cerr << "Erro na conversão de BGR para RBG!\n";
+			vc_image_free(imageFromVideo);
+			vc_image_free(imageInRGB);
+			vc_image_free(imageInHSV);
+			vc_image_free(imageSegmentation);
+			return 1;
+		}
+
+
+		cv::Mat rgbImage(video.height, video.width, CV_8UC3, imageInRGB->data);
+		cv::cvtColor(rgbImage, rgbImage, cv::COLOR_RGB2BGR);
+		cv::imshow("BGR to RGB", rgbImage);
+
+		// Conversão para HSV
+		if (vc_rgb_to_hsv(imageInRGB, imageInHSV) == 0) {
+			std::cerr << "Erro na conversão de RGB para HSV!\n";
+			vc_image_free(imageFromVideo);
+			vc_image_free(imageInRGB);
+			vc_image_free(imageInHSV);
+			vc_image_free(imageSegmentation);
+			return 1;
+		}
+		cv::imshow("BGR to RGB", rgbImage);
+
+		// Segmentação HSV
+
+		if (vc_hsv_segmentation(imageInHSV, imageSegmentation, 210, 230, 30, 100, 30, 60) != 1) {
+			std::cerr << "Erro na segmentação HSV!\n";
+			vc_image_free(imageFromVideo);
+			vc_image_free(imageInHSV);
+			vc_image_free(imageSegmentation);
+			return 1;
+		}
+
+		// Exibição da imagem segmentada frame a frame
+		cv::Mat segImage(video.height, video.width, CV_8UC1, imageSegmentation->data);
+		//cv::imshow("Segmentacao", segImage);
+		cv::imshow("VC - VIDEO", frame);
+
+
+
+
+
+
+		/* douradas */
+		// Cria novas imagens IVC  
+		IVC* image3 = vc_image_new(video.width, video.height, 3, 255);
+		IVC* image4 = vc_image_new(video.width, video.height, 3, 255);
+		IVC* image5 = vc_image_new(video.width, video.height, 3, 255);
+
+		vc_bgr_to_rgb(imageInRGB, image3);
+		vc_rgb_to_hsv(image3, image4);
+		vc_hsv_segmentation(image4, image5, 40, 70, 20, 70, 20, 70);
+
+		// Mostra a imagem hsv 
+		memcpy(frame.data, imageInHSV->data, video.width * video.height * 3);
+		cv::imshow("VC - VIDEO", frame);
+
+		// Cria um Mat com os dados da imagem segmentada e mostra
+		cv::Mat segmentedImage(video.height, video.width, CV_8UC1, image5->data);
+		cv::imshow("Segmentacao HSV", segmentedImage);
+
+		// Liberta a memória da imagem IVC que havia sido criada  
+		vc_image_free(image3);
+		vc_image_free(image4);
+		vc_image_free(image5);
+
+		/* escuras */
+		// Cria novas imagens IVC  
+		IVC* image6 = vc_image_new(video.width, video.height, 3, 255);
+		IVC* image7 = vc_image_new(video.width, video.height, 3, 255);
+		IVC* image8 = vc_image_new(video.width, video.height, 3, 255);
+
+		vc_bgr_to_rgb(imageInRGB, image6);
+		vc_rgb_to_hsv(image6, image7);
+		vc_hsv_segmentation(image7, image8, 30, 45, 50, 75, 20, 35);
+
+		// Mostra a imagem hsv 
+		memcpy(frame.data, imageInHSV->data, video.width * video.height * 3);
+		cv::imshow("VC - VIDEO", frame);
+
+		// Cria um Mat com os dados da imagem segmentada e mostra
+		cv::Mat segmentedImage2(video.height, video.width, CV_8UC1, image8->data);
+		cv::imshow("Segmentacao HSV", segmentedImage2);
+
+		// Liberta a memória da imagem IVC que havia sido criada  
+		vc_image_free(image6);
+		vc_image_free(image7);
+		vc_image_free(image8);
+
+
+
+
+
+		// Aguardar a tecla 'q' para sair
+		key = cv::waitKey(60);
+
+		// Liberação dos recursos
+		vc_image_free(imageFromVideo);
+		vc_image_free(imageInHSV);
+		vc_image_free(imageSegmentation);
+
+
+=======
 		// Faça o seu código aqui...
 		/*
 		// Cria uma nova imagem IVC
@@ -102,6 +222,7 @@ int main(void) {
 		// Liberta a memória da imagem IVC que havia sido criada
 		vc_image_free(image);
 		*/
+>>>>>>> parent of 646d8aa (Convert BGR to RGB and Inicial Segmentation)
 		// +++++++++++++++++++++++++
 
 		/* Exemplo de inserção texto na frame */

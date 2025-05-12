@@ -571,9 +571,9 @@ int vc_rgb_to_hsv(IVC* src, IVC* dst)
 				s = max == 0 ? 0 : (delta / max);
 			}
 
-			data_dst[i] = (unsigned char)(h / 2);        // Convertendo H para 0-255
-			data_dst[i + 1] = (unsigned char)(s * 255);  // Convertendo S para 0-255
-			data_dst[i + 2] = (unsigned char)(v * 255);  // Convertendo V para 0-255
+			data_dst[i] = (unsigned char)(h / 2.0f + 0.5f);     // H (0–179)
+			data_dst[i + 1] = (unsigned char)(s * 255.0f + 0.5f);   // S (0–255)
+			data_dst[i + 2] = (unsigned char)(v * 255.0f + 0.5f);   // V (0–255)
 		}
 	}
 

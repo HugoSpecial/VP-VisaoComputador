@@ -1,4 +1,13 @@
 ﻿  Source.cpp
+<<<<<<< HEAD
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  Gerando código
+  0 of 135 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finalizada a geração de código
+  TP-G7-25481-27963-27966-27975.vcxproj -> C:\Users\paulo\Downloads\VP-VisaoComputador\VP-VisaoComputador\x64\Release\TP-G7-25481-27963-27966-27975.exe
+=======
   vc.c
 C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(246,13): warning C4267: '=': conversão de 'size_t' para 'int', possível perda de dados
 C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(286,13): warning C4267: '=': conversão de 'size_t' para 'int', possível perda de dados
@@ -12,3 +21,4 @@ C:\VisaoComputador\TP-G7-25481-27963-27966-27975\vc.c(1448,8): warning C4244: '=
   All 130 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finalizada a geração de código
   TP-G7-25481-27963-27966-27975.vcxproj -> C:\VisaoComputador\TP-G7-25481-27963-27966-27975\x64\Release\TP-G7-25481-27963-27966-27975.exe
+>>>>>>> parent of 646d8aa (Convert BGR to RGB and Inicial Segmentation)
